@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDesk Admin - Edit Booking</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div>
+                <div class="sidebar-brand">SkyDesk Admin</div>
+                <ul class="sidebar-menu">
+                    <li><a href="admin-dashboard.html">Dashboard</a></li>
+                    <li><a href="admin-bookings.html" class="active">Bookings</a></li>
+                    <li><a href="admin-users.html">Users</a></li>
+                    <li><a href="admin-edit-flight.html">Flights</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+
+        <!-- Right Main Content -->
+        <div class="main-area">
+            <div class="top-header-row">
+                <h1 class="page-heading">Edit booking K7M2QX</h1>
+                <a href="admin-bookings.html" class="btn-outline">Back to bookings</a>
+            </div>
+
+            <div class="edit-grid">
+                <!-- Left Form Card -->
+                <div class="content-card edit-form-card">
+                    <form id="editBookingForm" onsubmit="return validateEditBooking()">
+                        <h3 class="card-heading">Passenger</h3>
+
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="editFullName">Full name</label>
+                                <input type="text" id="editFullName" value="Rahim Uddin" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editPhone">Phone</label>
+                                <input type="text" id="editPhone" value="01700000001" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editEmail">Email</label>
+                            <input type="text" id="editEmail" value="rahim@example.com" required>
+                        </div>
+
+                        <h3 class="card-heading section-gap">Flight</h3>
+
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="editFlight">Flight</label>
+                                <select id="editFlight" required>
+                                    <option value="SD 305 · DAC → CXB">SD 305 · DAC &rarr; CXB</option>
+                                    <option value="SD 118 · DAC → CGP">SD 118 · DAC &rarr; CGP</option>
+                                    <option value="SD 306 · CXB → DAC">SD 306 · CXB &rarr; DAC</option>
+                                    <option value="SD 210 · DAC → JSR">SD 210 · DAC &rarr; JSR</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editDate">Date</label>
+                                <input type="date" id="editDate" value="2026-11-06" required>
+                            </div>
+                        </div>
+
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="editSeat">Seat</label>
+                                <input type="text" id="editSeat" value="12A" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editStatus">Status</label>
+                                <select id="editStatus" required>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Cancelled">Cancelled</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <p id="editError" class="error-msg"></p>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Save changes</button>
+                            <button type="button" class="btn-outline" onclick="cancelCurrentBooking()">Cancel
+                                booking</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right Booking Info Card -->
+                <div class="content-card booking-info-card">
+                    <h3 class="card-heading">Booking info</h3>
+
+                    <div class="info-row">
+                        <span>PNR</span>
+                        <strong>K7M2QX</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Amount</span>
+                        <strong>BDT 5,950</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Payment</span>
+                        <span class="badge confirmed">Paid</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Booked on</span>
+                        <strong>27 Oct 2026</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
