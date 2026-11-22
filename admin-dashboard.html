@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDesk Admin - Dashboard</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div>
+                <div class="sidebar-brand">SkyDesk Admin</div>
+                <ul class="sidebar-menu">
+                    <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="admin-bookings.html">Bookings</a></li>
+                    <li><a href="admin-users.html">Users</a></li>
+                    <li><a href="admin-flights.html">Flights</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+
+        <!-- Right Main Content -->
+        <div class="main-area">
+            <h1 class="page-heading">Dashboard</h1>
+
+            <!-- Stat Cards -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <p class="stat-label">Total bookings</p>
+                    <h2 class="stat-value">1,284</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-label">Revenue</p>
+                    <h2 class="stat-value">BDT 6.4M</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-label">Active flights</p>
+                    <h2 class="stat-value">42</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-label">Registered users</p>
+                    <h2 class="stat-value">3,908</h2>
+                </div>
+            </div>
+
+            <!-- Recent Bookings Table -->
+            <div class="content-card">
+                <h3 class="card-heading">Recent bookings</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>PNR</th>
+                            <th>Passenger</th>
+                            <th>Route</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>K7M2QX</td>
+                            <td>Rahim Uddin</td>
+                            <td>DAC ➜ CXB</td>
+                            <td>6 Nov</td>
+                            <td>BDT 5,950</td>
+                            <td><span class="badge confirmed">Confirmed</span></td>
+                            <td><a href="admin-edit-booking.html" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>P4TD9W</td>
+                            <td>Nusrat Jahan</td>
+                            <td>DAC ➜ CGP</td>
+                            <td>22 Nov</td>
+                            <td>BDT 4,800</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td><a href="admin-edit-booking.html" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>R8HN3B</td>
+                            <td>Tanvir Ahmed</td>
+                            <td>CXB ➜ DAC</td>
+                            <td>9 Dec</td>
+                            <td>BDT 5,950</td>
+                            <td><span class="badge cancelled">Cancelled</span></td>
+                            <td><a href="admin-edit-booking.html" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>M2LC5Z</td>
+                            <td>Sadia Islam</td>
+                            <td>DAC ➜ JSR</td>
+                            <td>12 Dec</td>
+                            <td>BDT 4,200</td>
+                            <td><span class="badge confirmed">Confirmed</span></td>
+                            <td><a href="admin-edit-booking.html" class="edit-link">Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
