@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDesk Admin - Edit flight SD 305</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div>
+                <div class="sidebar-brand">SkyDesk Admin</div>
+                <ul class="sidebar-menu">
+                    <li><a href="admin-dashboard.html">Dashboard</a></li>
+                    <li><a href="admin-bookings.html">Bookings</a></li>
+                    <li><a href="admin-users.html">Users</a></li>
+                    <li><a href="admin-flights.html" class="active">Flights</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+
+        <!-- Right Main Content -->
+        <div class="main-area">
+            <div class="top-header-row">
+                <h1 class="page-heading">Edit flight SD 305</h1>
+                <a href="admin-flights.html" class="btn-outline">Back to flights</a>
+            </div>
+
+            <div class="content-card edit-flight-card">
+                <form id="editFlightForm" onsubmit="return validateEditFlight()">
+                    <div class="two-col">
+                        <div class="form-group">
+                            <label for="flightNumber">Flight number</label>
+                            <input type="text" id="flightNumber" value="SD 305" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="aircraft">Aircraft</label>
+                            <input type="text" id="aircraft" value="Boeing 737-800" required>
+                        </div>
+                    </div>
+
+                    <div class="two-col">
+                        <div class="form-group">
+                            <label for="fromAirport">From</label>
+                            <input type="text" id="fromAirport" value="Dhaka (DAC)" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="toAirport">To</label>
+                            <input type="text" id="toAirport" value="Cox's Bazar (CXB)" required>
+                        </div>
+                    </div>
+
+                    <div class="two-col">
+                        <div class="form-group">
+                            <label for="departureTime">Departure</label>
+                            <select id="departureTime" required>
+                                <option value="">Select departure time</option>
+                                <option value="6 Nov 08:15">6 Nov 08:15</option>
+                                <option value="6 Nov 10:00">6 Nov 10:00</option>
+                                <option value="22 Nov 14:30">22 Nov 14:30</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="arrivalTime">Arrival</label>
+                            <select id="arrivalTime" required>
+                                <option value="">Select arrival time</option>
+                                <option value="09:20">09:20</option>
+                                <option value="11:05">11:05</option>
+                                <option value="15:20">15:20</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="three-col">
+                        <div class="form-group">
+                            <label for="totalSeats">Total seats</label>
+                            <input type="text" id="totalSeats" value="160" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="baseFare">Base fare (BDT)</label>
+                            <input type="text" id="baseFare" value="5200" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="flightStatus">Status</label>
+                            <select id="flightStatus" required>
+                                <option value="Scheduled">Scheduled</option>
+                                <option value="Delayed">Delayed</option>
+                                <option value="Cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p id="editFlightError" class="error-msg"></p>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Save changes</button>
+                        <button type="reset" class="btn-outline">Discard</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+
+</html>
