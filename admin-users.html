@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDesk Admin - Users</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div>
+                <div class="sidebar-brand">SkyDesk Admin</div>
+                <ul class="sidebar-menu">
+                    <li><a href="admin-dashboard.html">Dashboard</a></li>
+                    <li><a href="admin-bookings.html">Bookings</a></li>
+                    <li><a href="admin-users.html" class="active">Users</a></li>
+                    <li><a href="admin-flights.html">Flights</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+
+        <!-- Right Main Content -->
+        <div class="main-area">
+            <div class="top-header-row">
+                <h1 class="page-heading">Users</h1>
+                <a href="#" class="btn-primary">Add user</a>
+            </div>
+
+            <div class="content-card">
+                <!-- Filter Row -->
+                <div class="filter-row">
+                    <div class="filter-box search-box">
+                        <label for="searchUser">Search</label>
+                        <input type="text" id="searchUser" placeholder="Name or email">
+                    </div>
+
+                    <div class="filter-box">
+                        <label for="userStatus">Status</label>
+                        <select id="userStatus">
+                            <option value="All">All</option>
+                            <option value="Active">Active</option>
+                            <option value="Blocked">Blocked</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Users Table -->
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Bookings</th>
+                            <th>Joined</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rahim Uddin</td>
+                            <td>rahim@example.com</td>
+                            <td>01700-000001</td>
+                            <td>6</td>
+                            <td>Jan 2026</td>
+                            <td><span class="badge confirmed">Active</span></td>
+                            <td>
+                                <a href="admin-edit-booking.html" class="edit-link">Edit</a>
+                                <a href="#" class="block-link">Block</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nusrat Jahan</td>
+                            <td>nusrat@example.com</td>
+                            <td>01700-000002</td>
+                            <td>3</td>
+                            <td>Mar 2026</td>
+                            <td><span class="badge confirmed">Active</span></td>
+                            <td>
+                                <a href="admin-edit-booking.html" class="edit-link">Edit</a>
+                                <a href="#" class="block-link">Block</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tanvir Ahmed</td>
+                            <td>tanvir@example.com</td>
+                            <td>01700-000003</td>
+                            <td>1</td>
+                            <td>May 2026</td>
+                            <td><span class="badge cancelled">Blocked</span></td>
+                            <td>
+                                <a href="admin-edit-booking.html" class="edit-link">Edit</a>
+                                <a href="#" class="block-link">Block</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sadia Islam</td>
+                            <td>sadia@example.com</td>
+                            <td>01700-000004</td>
+                            <td>4</td>
+                            <td>Jun 2026</td>
+                            <td><span class="badge confirmed">Active</span></td>
+                            <td>
+                                <a href="admin-edit-booking.html" class="edit-link">Edit</a>
+                                <a href="#" class="block-link">Block</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Imran Hossain</td>
+                            <td>imran@example.com</td>
+                            <td>01700-000005</td>
+                            <td>2</td>
+                            <td>Aug 2026</td>
+                            <td><span class="badge confirmed">Active</span></td>
+                            <td>
+                                <a href="admin-edit-booking.html" class="edit-link">Edit</a>
+                                <a href="#" class="block-link">Block</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Farhana Akter</td>
+                            <td>farhana@example.com</td>
+                            <td>01700-000006</td>
+                            <td>5</td>
+                            <td>Sep 2026</td>
+                            <td><span class="badge confirmed">Active</span></td>
+                            <td>
+                                <a href="admin-edit-booking.html" class="edit-link">Edit</a>
+                                <a href="#" class="block-link">Block</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-footer">
+                    <span>Showing 1 - 6 of 3,908</span>
+                    <div class="pagination-btns">
+                        <button type="button" class="btn-outline">Previous</button>
+                        <button type="button" class="btn-outline">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

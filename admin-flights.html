@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDesk Admin - Flights</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div>
+                <div class="sidebar-brand">SkyDesk Admin</div>
+                <ul class="sidebar-menu">
+                    <li><a href="admin-dashboard.html">Dashboard</a></li>
+                    <li><a href="admin-bookings.html">Bookings</a></li>
+                    <li><a href="admin-users.html">Users</a></li>
+                    <li><a href="admin-flights.html" class="active">Flights</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+
+        <!-- Right Main Content -->
+        <div class="main-area">
+            <div class="top-header-row">
+                <h1 class="page-heading">Flights</h1>
+                <a href="admin-edit-flight.html" class="btn-primary">Add flight</a>
+            </div>
+
+            <div class="content-card">
+                <!-- Filter Row -->
+                <div class="filter-row">
+                    <div class="filter-box search-box">
+                        <label for="searchFlight">Search</label>
+                        <input type="text" id="searchFlight" placeholder="Flight no. or route">
+                    </div>
+
+                    <div class="filter-box">
+                        <label for="flightStatusFilter">Status</label>
+                        <select id="flightStatusFilter">
+                            <option value="All">All</option>
+                            <option value="Scheduled">Scheduled</option>
+                            <option value="Delayed">Delayed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Flights Table -->
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Flight</th>
+                            <th>Route</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Seats left</th>
+                            <th>Fare</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SD 305</td>
+                            <td>DAC ➜ CXB</td>
+                            <td>6 Nov 08:15</td>
+                            <td>09:20</td>
+                            <td>42</td>
+                            <td>BDT 5,200</td>
+                            <td><span class="badge confirmed">Scheduled</span></td>
+                            <td>
+                                <a href="admin-edit-flight.html" class="edit-link">Edit</a>
+                                <a href="#" class="delete-link">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SD 306</td>
+                            <td>CXB ➜ DAC</td>
+                            <td>6 Nov 10:00</td>
+                            <td>11:05</td>
+                            <td>18</td>
+                            <td>BDT 5,200</td>
+                            <td><span class="badge confirmed">Scheduled</span></td>
+                            <td>
+                                <a href="admin-edit-flight.html" class="edit-link">Edit</a>
+                                <a href="#" class="delete-link">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SD 118</td>
+                            <td>DAC ➜ CGP</td>
+                            <td>22 Nov 14:30</td>
+                            <td>15:20</td>
+                            <td>60</td>
+                            <td>BDT 4,100</td>
+                            <td><span class="badge pending">Delayed</span></td>
+                            <td>
+                                <a href="admin-edit-flight.html" class="edit-link">Edit</a>
+                                <a href="#" class="delete-link">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SD 221</td>
+                            <td>DAC ➜ JSR</td>
+                            <td>12 Dec 09:00</td>
+                            <td>09:55</td>
+                            <td>35</td>
+                            <td>BDT 3,900</td>
+                            <td><span class="badge confirmed">Scheduled</span></td>
+                            <td>
+                                <a href="admin-edit-flight.html" class="edit-link">Edit</a>
+                                <a href="#" class="delete-link">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SD 410</td>
+                            <td>DAC ➜ SPD</td>
+                            <td>15 Dec 16:45</td>
+                            <td>17:40</td>
+                            <td>0</td>
+                            <td>BDT 4,300</td>
+                            <td><span class="badge cancelled">Cancelled</span></td>
+                            <td>
+                                <a href="admin-edit-flight.html" class="edit-link">Edit</a>
+                                <a href="#" class="delete-link">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
